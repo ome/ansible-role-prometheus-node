@@ -37,6 +37,9 @@
     path: /opt/prometheus/node_exporter
     force: true
     state: link
+  notify:
+    - reload systemd
+    - restart prometheus-node-exporter
 
 - name: prometheus node | systemd service
   become: true
