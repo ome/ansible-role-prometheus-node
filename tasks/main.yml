@@ -12,7 +12,8 @@
   become: true
   get_url:
     url: "https://github.com/prometheus/node_exporter/releases/download/\
-      v{{ prometheus_node_version }}/node_exporter-0.15.2.linux-amd64.tar.gz"
+      v{{ prometheus_node_version }}/node_exporter-{{ prometheus_node_version
+      }}.linux-amd64.tar.gz"
     checksum: "sha256:{{ prometheus_node_sha256 }}"
     dest: "/opt/prometheus/\
       node_exporter-{{ prometheus_node_version }}.linux-amd64.tar.gz"
@@ -36,6 +37,9 @@
     path: /opt/prometheus/node_exporter
     force: true
     state: link
+  notify:
+    - reload systemd
+    - restart prometheus-node-exporter
 
 - name: prometheus node | systemd service
   become: true

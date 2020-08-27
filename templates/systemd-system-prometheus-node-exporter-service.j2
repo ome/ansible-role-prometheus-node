@@ -2,7 +2,7 @@
 Description=Prometheus Node Exporter
 
 [Service]
-ExecStart=/opt/prometheus/node_exporter/node_exporter {{ prometheus_node_args | default('') }}
+ExecStart=/opt/prometheus/node_exporter/node_exporter {{ prometheus_node_args }}
 
 [Install]
 WantedBy=multi-user.target

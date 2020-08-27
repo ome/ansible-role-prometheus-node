@@ -1,0 +1,8 @@
+---
+# defaults for prometheus-node
+
+prometheus_node_version: 1.0.1
+prometheus_node_sha256:
+  3369b76cd2b0ba678b6d618deab320e565c3d93ccb5c2a0d5db51a53857768ae
+
+prometheus_node_args: ''

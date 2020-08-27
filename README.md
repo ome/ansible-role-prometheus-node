@@ -10,6 +10,9 @@ Prometheus node-exporter, defaults to listening on port 9100.
 Role Variables
 --------------
 
+All variables are optional:
+- `prometheus_node_version`: Prometheus Node version
+- `prometheus_node_sha256`: SHA256 checksum for the Linux amd64 download
 - `prometheus_node_args`: Arguments passed on the command line.
   See https://github.com/prometheus/node_exporter/ for configuration information.
 
