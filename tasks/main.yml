@@ -5,8 +5,8 @@
   become: true
   file:
     path: /opt/prometheus
-    recurse: true
     state: directory
+    mode: 0755
 
 - name: prometheus node | download node-exporter
   become: true
@@ -47,6 +47,7 @@
     dest: "/etc/systemd/system/prometheus-node-exporter.service"
     force: true
     src: "systemd-system-prometheus-node-exporter-service.j2"
+    mode: 0644
   notify:
     - reload systemd
     - restart prometheus-node-exporter
