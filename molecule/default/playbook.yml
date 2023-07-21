@@ -2,5 +2,5 @@
 - name: Converge
   hosts: all
   roles:
-    - role: ansible-role-prometheus-node
+    - role: ome.prometheus_node
       prometheus_node_args: "--web.listen-address :19100"
