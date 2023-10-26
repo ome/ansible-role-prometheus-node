@@ -2,7 +2,7 @@ Prometheus
 ==========
 
 [![Actions Status](https://github.com/ome/ansible-role-prometheus-node/workflows/Molecule/badge.svg)](https://github.com/ome/ansible-role-prometheus-node/actions)
-[![Ansible Role](https://img.shields.io/ansible/role/41329.svg)](https://galaxy.ansible.com/ome/prometheus_node/)
+[![Ansible Role](https://img.shields.io/badge/ansible--galaxy-prometheus_node-blue.svg)](https://galaxy.ansible.com/ui/standalone/roles/ome/prometheus_node/)
 
 Prometheus node-exporter, defaults to listening on port 9100.
 
