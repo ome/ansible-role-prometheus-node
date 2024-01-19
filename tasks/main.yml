@@ -54,7 +54,7 @@
 
 # Flush handlers to ensure systemd is reloaded
 - name: prometheus node | flush systemd handlers
-  meta: flush_handlers
+  ansible.builtin.meta: flush_handlers
 
 - name: prometheus node | enable and start systemd service
   become: true
