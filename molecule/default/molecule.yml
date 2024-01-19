@@ -9,9 +9,13 @@ lint: |
     flake8
 platforms:
   - name: prometheus-node
-    image: centos/systemd:latest
-    privileged: true
+    image: eniocarboni/docker-rockylinux-systemd:9
+    image_version: latest
     command: /sbin/init
+    privileged: true
+    cgroupns_mode: host
+    tmpfs:
+      - /sys/fs/cgroup
 provisioner:
   name: ansible
   lint:
