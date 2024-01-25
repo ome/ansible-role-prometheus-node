@@ -10,6 +10,6 @@
 
 - name: restart prometheus-node-exporter
   become: true
-  service:
+  ansible.builtin.service:
     name: prometheus-node-exporter
     state: restarted
